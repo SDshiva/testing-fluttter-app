@@ -19,7 +19,8 @@ void main() {
       counterService = CounterService();
     });
 
-    testWidgets('should display initial counter value', (WidgetTester tester) async {
+    testWidgets('should display initial counter value',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -30,7 +31,8 @@ void main() {
       expect(find.byKey(const Key('counter_text')), findsOneWidget);
     });
 
-    testWidgets('should display correct status and parity for initial value', (WidgetTester tester) async {
+    testWidgets('should display correct status and parity for initial value',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -41,7 +43,8 @@ void main() {
       expect(find.text('Even number'), findsOneWidget);
     });
 
-    testWidgets('increment button should increase counter', (WidgetTester tester) async {
+    testWidgets('increment button should increase counter',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -57,7 +60,8 @@ void main() {
       expect(find.text('Odd number'), findsOneWidget);
     });
 
-    testWidgets('decrement button should decrease counter', (WidgetTester tester) async {
+    testWidgets('decrement button should decrease counter',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -80,7 +84,8 @@ void main() {
       expect(find.text('Odd number'), findsOneWidget);
     });
 
-    testWidgets('decrement button should not go below 0', (WidgetTester tester) async {
+    testWidgets('decrement button should not go below 0',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -95,7 +100,8 @@ void main() {
       expect(find.text('Status: Zero'), findsOneWidget);
     });
 
-    testWidgets('reset button should reset counter to 0', (WidgetTester tester) async {
+    testWidgets('reset button should reset counter to 0',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -119,7 +125,8 @@ void main() {
       expect(find.text('Even number'), findsOneWidget);
     });
 
-    testWidgets('should find all required widgets', (WidgetTester tester) async {
+    testWidgets('should find all required widgets',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),
@@ -135,7 +142,8 @@ void main() {
       expect(find.byKey(const Key('reset_button')), findsOneWidget);
     });
 
-    testWidgets('should display different statuses correctly', (WidgetTester tester) async {
+    testWidgets('should display different statuses correctly',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: CounterScreen(counterService: counterService),

@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       home: CounterScreen(
         counterService: CounterService(),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

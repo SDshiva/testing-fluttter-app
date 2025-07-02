@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testing/controller/details_service.dart';
+import 'package:testing/screen/details_screen.dart';
 import '../../controller/counter_service.dart';
 
 class CounterScreen extends StatefulWidget {
@@ -79,6 +81,24 @@ class _CounterScreenState extends State<CounterScreen> {
                   child: const Icon(Icons.add),
                 ),
               ],
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton.icon(
+              key: const Key('details_button'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(
+                      detailsService: DetailsService(
+                        count: widget.counterService.counter,
+                      ),
+                    ),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.info_outline),
+              label: const Text('Details'),
             ),
           ],
         ),
