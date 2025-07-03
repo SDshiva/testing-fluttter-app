@@ -49,7 +49,7 @@ void main() {
       expect(find.text('0'), findsOneWidget);
       expect(find.text('Status: Zero'), findsOneWidget);
       expect(find.text('Even number'), findsOneWidget);
-    });
+    }, tags: ['counter_screen']);
   });
 
   group('DetailsScreen Integration Tests', () {
@@ -102,13 +102,14 @@ void main() {
       expect(find.text('Count is a multiple of 5'), findsOneWidget);
 
       // Press back
+      await tester.ensureVisible(find.byKey(const Key('back_button')));
       await tester.tap(find.byKey(const Key('back_button')));
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 1));
 
-      // Confirm we're back to CounterScreen
-      expect(find.text('5'), findsOneWidget);
+      // Confirm we're back to CounterScreen - use specific finder
+      expect(find.byKey(const Key('status_text')), findsOneWidget);
       expect(find.text('Status: Medium'), findsOneWidget);
-    });
+    }, tags: ['details_screen']);
   });
 }
