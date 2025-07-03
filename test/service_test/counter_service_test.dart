@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:testing/controller/counter_service.dart';
+import 'package:testing/services/counter_service.dart';
 
 void main() {
   group('CounterService Unit Tests', () {

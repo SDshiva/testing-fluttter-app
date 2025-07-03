@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:testing/controller/details_service.dart';
+import 'package:testing/services/details_service.dart';
 import 'package:testing/screen/details_screen.dart';
 
 void main() {

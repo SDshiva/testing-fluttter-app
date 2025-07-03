@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../controller/details_service.dart';
+import '../services/details_service.dart';
 
 class DetailsScreen extends StatefulWidget {
   final DetailsService detailsService;

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:testing/controller/details_service.dart';
+import 'package:testing/services/details_service.dart';
 
 void main() {
   group('DetailsService Unit Tests', () {

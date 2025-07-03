@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:testing/controller/counter_service.dart';
+import 'package:testing/services/counter_service.dart';
 import 'package:testing/main.dart';
 import 'package:testing/screen/counter_screen.dart';
 

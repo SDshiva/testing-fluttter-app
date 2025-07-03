@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:testing/controller/details_service.dart';
+import 'package:testing/screen/api_data_screen.dart';
+import 'package:testing/services/details_service.dart';
 import 'package:testing/screen/details_screen.dart';
-import '../../controller/counter_service.dart';
+import '../services/counter_service.dart';
 
 class CounterScreen extends StatefulWidget {
   final CounterService counterService;
@@ -99,6 +100,18 @@ class _CounterScreenState extends State<CounterScreen> {
               },
               icon: const Icon(Icons.info_outline),
               label: const Text('Details'),
+            ),
+            ElevatedButton(
+              key: const Key('api_data_button'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ApiDataScreen(),
+                  ),
+                );
+              },
+              child: const Text('API Data'),
             ),
           ],
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testing/screen/counter_screen.dart';
 
-import 'controller/counter_service.dart';
+import 'services/counter_service.dart';
 
 void main() {
   runApp(const MyApp());
